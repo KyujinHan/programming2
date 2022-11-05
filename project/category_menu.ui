@@ -22,6 +22,9 @@
     <height>812</height>
    </size>
   </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
@@ -71,7 +74,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>images/category_page.png</pixmap>
+     <pixmap>images/categories.png</pixmap>
     </property>
    </widget>
    <widget class="QPushButton" name="selete_btn">
@@ -171,7 +174,7 @@
    <widget class="QPushButton" name="medicine_btn">
     <property name="geometry">
      <rect>
-      <x>208</x>
+      <x>200</x>
       <y>150</y>
       <width>54</width>
       <height>60</height>
@@ -237,7 +240,7 @@
    <widget class="QPushButton" name="edu_btn">
     <property name="geometry">
      <rect>
-      <x>120</x>
+      <x>123</x>
       <y>250</y>
       <width>56</width>
       <height>60</height>
@@ -371,6 +374,28 @@
      <rect>
       <x>288</x>
       <y>350</y>
+      <width>40</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>OpenHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 0px; background-color:rgba(255,255,255,0.0)</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="other_btn">
+    <property name="geometry">
+     <rect>
+      <x>48</x>
+      <y>450</y>
       <width>40</width>
       <height>60</height>
      </rect>

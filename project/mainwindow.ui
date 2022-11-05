@@ -32,58 +32,119 @@
    <widget class="QPushButton" name="loginButton">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>260</y>
-      <width>80</width>
-      <height>24</height>
+      <x>20</x>
+      <y>480</y>
+      <width>331</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(130, 130, 130);</string>
+     <string notr="true">QPushButton{
+	font: 700 12pt &quot;맑은 고딕&quot;;
+	color: rgb(255, 255, 255);
+	background-color: rgb(0,0,0);
+	border: 2px solid rgb(0,0,0);
+	border-radius: 10px;
+}</string>
     </property>
     <property name="text">
-     <string>login</string>
+     <string>LOGIN</string>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="signupButton">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>290</y>
-      <width>80</width>
-      <height>24</height>
+      <x>20</x>
+      <y>532</y>
+      <width>331</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(130, 130, 130);</string>
+     <string notr="true">QPushButton{
+	font: 700 12pt &quot;맑은 고딕&quot;;
+	color: rgb(255, 255, 255);
+	background-color: rgb(0,0,0);
+	border: 2px solid rgb(0,0,0);
+	border-radius: 10px;
+}</string>
     </property>
     <property name="text">
-     <string>sign up</string>
+     <string>SIGN UP</string>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLineEdit" name="line_username">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>230</y>
-      <width>113</width>
-      <height>24</height>
+      <x>60</x>
+      <y>420</y>
+      <width>287</width>
+      <height>25</height>
      </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+font: 700 12pt &quot;맑은 고딕&quot;;</string>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="check_label">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>320</y>
+      <x>30</x>
+      <y>580</y>
       <width>131</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>checking space</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>375</width>
+      <height>812</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">&lt;img src=&quot;/images/signup.jpg&quot;&gt;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/images/signup.jpg</pixmap>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>loginButton</zorder>
+   <zorder>signupButton</zorder>
+   <zorder>line_username</zorder>
+   <zorder>check_label</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -97,6 +158,8 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

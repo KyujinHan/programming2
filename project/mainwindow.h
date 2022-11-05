@@ -36,4 +36,5 @@ private:
     // Database
     QSqlDatabase mydb;
 };
+
 #endif // MAINWINDOW_H

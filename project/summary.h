@@ -19,6 +19,12 @@ public:
 private slots:
     void on_go_secpage_clicked();
 
+    void on_month_btn_clicked();
+
+    void on_year_btn_clicked();
+
+    void on_week_btn_clicked();
+
 private:
     Ui::summary *ui;
     // Secmainwindow *secmain_page;

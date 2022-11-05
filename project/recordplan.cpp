@@ -29,7 +29,7 @@ Recordplan::Recordplan(QWidget *parent) :
 
     // check the num
     QSqlQuery qry;
-    QString field_num;
+    QString field_num, money, title;
     qry.exec("SELECT field_num FROM userTable WHERE implement='Y'");
     qry.next(); // only 1 orw
     //qDebug() << qry.value(0); // ex) QVariant(QString, "kyujin")
@@ -41,7 +41,16 @@ Recordplan::Recordplan(QWidget *parent) :
         qDebug() << "good";
     }
 
+    // set text(?)
+    qry.exec("SELECT money FROM userTable WHERE implement='Y'");
+    qry.next();
+    money = qry.value(0).toString();
+    ui -> money_line -> setText(money);
 
+    qry.exec("SELECT title FROM userTable WHERE implement='Y'");
+    qry.next();
+    title = qry.value(0).toString();
+    ui -> title_line -> setText(title);
 }
 
 Recordplan::~Recordplan()
@@ -256,6 +265,24 @@ void Recordplan::on_remove_money_clicked()
 
 void Recordplan::on_go_category_menu_clicked()
 {
+    QString record_money = ui -> money_line -> text();
+    QString record_title = ui -> title_line -> text();
+
+    // record database
+    QSqlQuery qry;
+    QString username;
+    // i) first find user name
+    qry.exec("SELECT user_name FROM userTable WHERE implement='Y'");
+    qry.next(); // only 1 orw
+    //qDebug() << qry.value(0); // ex) QVariant(QString, "kyujin")
+    username = qry.value(0).toString();
+
+    // ii) update
+    if(!(qry.exec("UPDATE userTable SET money='"+record_money+"' WHERE implement='Y'"))){
+        qDebug() << qry.lastError().text();
+    }
+    qry.exec("UPDATE userTable SET title='"+record_title+"' WHERE implement='Y'");
+
     hide();
     category = new category_menu(this);
     category->show();

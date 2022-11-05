@@ -10,6 +10,8 @@ namespace Ui {
 class category_menu;
 }
 
+class QLineEdit;
+
 class category_menu : public QDialog
 {
     Q_OBJECT
@@ -45,8 +47,10 @@ private slots:
 
     void on_beauty_btn_clicked();
 
-
     void on_selete_btn_clicked();
+
+
+    void on_other_btn_clicked();
 
 private:
     Ui::category_menu *ui;

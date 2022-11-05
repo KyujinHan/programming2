@@ -12,6 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    QPixmap pix(":/images/signup.jpg");
     /*
     QPixmap pix(":/images/BackgroundFinal.png");
     ui->label_pic->setPixmap(pix.scaled(375,812));
@@ -27,13 +28,19 @@ MainWindow::MainWindow(QWidget *parent)
 
     // Database
     mydb = QSqlDatabase::addDatabase("QSQLITE"); // database make object
-    mydb.setDatabaseName("./project_data.db"); // database name
+    if(QSysInfo::productType()=="osx"){ // mac
+        mydb.setDatabaseName("../../../project_data.db"); // database name
+    } else { //arm or window
+        mydb.setDatabaseName("./project_data.db"); // database name
+    }
 
     if(!mydb.open()){
         ui -> check_label -> setText("Not connected database"); // label is objectName
     } else {
         ui -> check_label -> setText("Connected database");
     }
+    ui -> line_username -> setStyleSheet("border: 0px; background-color:rgba(255,255,255,0.0)");
+
 }
 
 MainWindow::~MainWindow()

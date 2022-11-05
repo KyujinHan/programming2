@@ -12,6 +12,7 @@ SOURCES += \
     category_menu.cpp \
     main.cpp \
     mainwindow.cpp \
+    planning.cpp \
     recordplan.cpp \
     secmainwindow.cpp \
     summary.cpp
@@ -19,6 +20,7 @@ SOURCES += \
 HEADERS += \
     category_menu.h \
     mainwindow.h \
+    planning.h \
     recordplan.h \
     secmainwindow.h \
     summary.h
@@ -26,6 +28,7 @@ HEADERS += \
 FORMS += \
     category_menu.ui \
     mainwindow.ui \
+    planning.ui \
     recordplan.ui \
     secmainwindow.ui \
     summary.ui
