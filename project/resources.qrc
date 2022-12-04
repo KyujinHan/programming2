@@ -1,0 +1,41 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/BackgroundFinal.png</file>
+        <file>images/Backgroundmodel.png</file>
+        <file>images/mainpage.png</file>
+        <file>images/recordplan.png</file>
+        <file>images/category_page.png</file>
+        <file>images/Beauty.png</file>
+        <file>images/Car.png</file>
+        <file>images/Clothes.png</file>
+        <file>images/Daily.png</file>
+        <file>images/Exercise.png</file>
+        <file>images/Living.png</file>
+        <file>images/Meal.png</file>
+        <file>images/Medicine.png</file>
+        <file>images/Snack.png</file>
+        <file>images/Transportation.png</file>
+        <file>images/Travel.png</file>
+        <file>images/Education.png</file>
+        <file>images/signup.jpg</file>
+        <file>images/mainpage_default.png</file>
+        <file>images/minus_btn.png</file>
+        <file>images/Other.png</file>
+        <file>images/record_page.png</file>
+        <file>images/summary_page.png</file>
+        <file>images/dialog.jpg</file>
+        <file>images/secmainwindow.png</file>
+        <file>images/summary.png</file>
+        <file>images/delete_category.png</file>
+        <file>images/Planning.png</file>
+        <file>font/NotoSansKR-Black.otf</file>
+        <file>font/NotoSansKR-Bold.otf</file>
+        <file>font/NotoSansKR-Light.otf</file>
+        <file>font/NotoSansKR-Medium.otf</file>
+        <file>font/NotoSansKR-Regular.otf</file>
+        <file>font/NotoSansKR-Thin.otf</file>
+        <file>font/OFL.txt</file>
+        <file>images/categories.png</file>
+        <file>images/delete_content.png</file>
+    </qresource>
+</RCC>
